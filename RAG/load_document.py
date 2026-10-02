@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 pdf_files = [
-    "Deployment.pdf", "another_document.pdf", "doccker.pdf"
+    "Deployment.pdf", "another_document.pdf", "docker.pdf"
 ]
 
 documents = []
@@ -29,7 +29,7 @@ from langchain_chroma import Chroma
 embedding_model = OllamaEmbeddings(model="qwen3-embedding:0.6b")
 
 vector_store = Chroma.from_documents(
-    documents=chunks,
+    documents=chunks,   
     embedding=embedding_model,
     persist_directory="./chroma_db"
 )
